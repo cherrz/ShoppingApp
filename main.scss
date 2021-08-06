@@ -1,0 +1,92 @@
+@import "./reset";
+@import "./variables";
+
+body {
+    background-color: $primaryColor;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header h2 {
+    text-align: center;
+    margin: 20px;
+    color: $accentColor;
+    font-size: 2.8rem;
+    font-weight: 700;
+    &::selection {
+        background-color: #e5383b;
+    }
+
+    span {
+        color: #e5383b;
+        &::selection {
+            background-color: $accentColor;
+        }
+    }
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    & button.addTaskButton {
+        padding: 7px 17px;
+        margin: 0px 20px;
+        border: none;
+        font-size: 1.5rem;
+        font-weight: 700;
+        background-color: $accentColor;
+        border-radius: 5px;
+        &:hover {
+            background-color: darken($accentColor, 15%);
+            cursor: pointer;
+        }
+    }
+
+    & input {
+        width: 40%;
+        height: 40px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-align: center;
+        background: lighten($accentColor, 10%);
+        border-radius: 5px;
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+div.taskContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background: yellow;
+
+    ul.todolist {
+        list-style: none;
+        width: 85%;
+
+        li {
+            width: 100%;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: $accentColor;
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    margin-top: auto;
+    font-weight: 400;
+    font-size: 14px;s
+    p a {
+        text-decoration: none;
+        color: darken($accentColor, 15%);
+    }
+}
