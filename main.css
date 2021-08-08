@@ -54,6 +54,10 @@ form button.addTaskButton:hover {
   cursor: pointer;
 }
 
+form button.addTaskButton:active {
+  color: black;
+}
+
 form input {
   width: 40%;
   height: 40px;
@@ -81,7 +85,9 @@ div.taskContainer ul.todolist {
 }
 
 div.taskContainer ul.todolist li {
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  min-width: 80%;
   font-size: 1.5rem;
   font-weight: 600;
   color: #ffd23f;
@@ -94,8 +100,7 @@ footer {
   font-size: 14px;
 }
 
-footer s
-p a {
+footer p a {
   text-decoration: none;
   color: #f2b900;
 }

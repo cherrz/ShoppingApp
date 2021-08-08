@@ -43,6 +43,9 @@ form {
             background-color: darken($accentColor, 15%);
             cursor: pointer;
         }
+        &:active {
+            color: black;
+        }
     }
 
     & input {
@@ -65,14 +68,15 @@ div.taskContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    // background: yellow;
 
     ul.todolist {
         list-style: none;
         width: 85%;
 
         li {
-            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            min-width: 80%;
             font-size: 1.5rem;
             font-weight: 600;
             color: $accentColor;
@@ -84,7 +88,7 @@ footer {
     text-align: center;
     margin-top: auto;
     font-weight: 400;
-    font-size: 14px;s
+    font-size: 14px;
     p a {
         text-decoration: none;
         color: darken($accentColor, 15%);
